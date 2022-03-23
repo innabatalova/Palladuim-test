@@ -1,0 +1,102 @@
+.navigation
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  min-height: 86px
+  border-bottom: 1px solid #EBEBEB
+
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-width: 280px
+    font-size: 14px
+    line-height: 20px
+    color: rgba(34, 34, 34, 0.7)
+    cursor: pointer
+
+    &__item
+      display: flex
+      align-items: center
+      min-height: 86px
+
+      &:hover,&:active,&:focus
+        border-bottom: 1.5px solid #222222
+        color: #222222
+
+  &__icon
+    width: 86px
+    height: 86px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+
+    &:hover svg path
+      fill: #C6876D
+
+    &__map
+      border-right: 1px solid #EBEBEB
+
+    &__logo
+
+      &:hover svg
+        width: 35px
+        height: 35px
+
+    &__call
+      border-left: 1px solid #EBEBEB
+
+  &__address, &__call
+    display: none
+    position: absolute
+    top: 0
+    left: 86px
+    bottom: 0
+    right: 86px
+    align-items: center
+    justify-content: center
+    background-color: #FFFFFF
+
+    &__title
+      color: #C6876D
+
+    &__map
+      position: relative
+      margin-right: 40px
+      font-size: 14px
+      line-height: 20px
+
+      &::after
+        content: ""
+        position: absolute
+        right: -20px
+        width: 1px
+        height: 20px
+        background-color: #EBEBEB
+
+  &__call
+
+    &__number
+      margin-right: 30px
+      font-size: 30px
+      line-height: 37px
+
+    &__button
+      position: relative
+      width: 170px
+      height: 40px
+      font-size: 14px
+      line-height: 20px
+      border-radius: 0
+      border: 1px solid rgba(34, 34, 34, 0.3)
+
+      &::before
+        content: ""
+        position: absolute
+        top: 19px
+        left: -10px
+        width: 20px
+        height: 1px
+        background-color: #222222
