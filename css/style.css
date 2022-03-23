@@ -48,6 +48,10 @@ button {
   cursor: pointer;
 }
 
+.flex {
+  display: flex !important;
+}
+
 .navigation {
   position: relative;
   display: flex;

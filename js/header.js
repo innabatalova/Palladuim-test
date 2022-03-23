@@ -1,36 +1,36 @@
-const navigationIconMap = document.querySelector(".navigation__icon__map");
-const navigationAddress = document.querySelector(".navigation__address");
-const navigationIconCall = document.querySelector(".navigation__icon__call");
-const navigationCall = document.querySelector(".navigation__call");
+const navigationIconMap = $(".navigation__icon__map");
+const navigationAddress = $(".navigation__address");
+const navigationIconCall = $(".navigation__icon__call");
+const navigationCall = $(".navigation__call");
 
-const openAddress = () => {
-  navigationAddress.style.display = "flex";
-};
-
-const closeAddress = () => {
-  navigationAddress.style.display = "none";
-};
-
-navigationIconMap.addEventListener("mouseover", () => {
-  setTimeout(openAddress, 300);
+navigationIconMap.on("mouseover", function () {
+  navigationAddress.addClass("flex");
+  navigationAddress.show();
 });
 
-navigationIconMap.addEventListener("mouseout", () => {
-  setTimeout(closeAddress, 300);
+$(document).mouseout(function (e) {
+  if (
+    !navigationIconMap.is(e.target) &&
+    !navigationAddress.is(e.target) &&
+    navigationAddress.has(e.target).length === 0
+  ) {
+    navigationAddress.removeClass("flex");
+    navigationAddress.hide();
+  }
 });
 
-const openCall = () => {
-  navigationCall.style.display = "flex";
-};
-
-const closeCall = () => {
-  navigationCall.style.display = "none";
-};
-
-navigationIconCall.addEventListener("mouseover", () => {
-  setTimeout(openCall, 300);
+navigationIconCall.on("mouseover", function () {
+  navigationCall.addClass("flex");
+  navigationCall.show();
 });
 
-navigationIconCall.addEventListener("mouseout", () => {
-  setTimeout(closeCall, 300);
+$(document).mouseout(function (e) {
+  if (
+    !navigationIconCall.is(e.target) &&
+    !navigationCall.is(e.target) &&
+    navigationCall.has(e.target).length === 0
+  ) {
+    navigationCall.removeClass("flex");
+    navigationCall.hide();
+  }
 });
