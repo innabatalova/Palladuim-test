@@ -27,12 +27,10 @@
 }
 
 body {
-  background: #FFFFFF;
   font-family: 'Gilroy 800';
   font-style: normal;
   font-weight: 800;
   min-width: 320px;
-  color: #222222;
 }
 
 a {
@@ -43,6 +41,10 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.wrapper {
+  position: relative;
 }
 
 .button {
@@ -69,6 +71,40 @@ ul {
   display: flex !important;
 }
 
+.works-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.primary-theme:hover, .primary-theme:active, .primary-theme:focus {
+  border-bottom: 1.5px solid #222222;
+  color: #222222;
+}
+
+.dark-theme {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark-theme:hover, .dark-theme:active, .dark-theme:focus {
+  border-bottom: 1.5px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+.dark-theme svg path {
+  fill: #ffffff;
+}
+
+.primary-title {
+  color: #ffffff;
+  text-shadow: -0 -2px 0 #222222,0 -2px 0 #222222, -0 2px 0 #222222, 0 2px 0 #222222,-2px -0 0 #222222,2px -0 0 #222222,-2px 0 0 #222222,2px 0 0 #222222,-1px -2px 0 #222222,1px -2px 0 #222222,-1px 2px 0 #222222,1px 2px 0 #222222,-2px -1px 0 #222222,2px -1px 0 #222222,-2px 1px 0 #222222,2px 1px 0 #222222;
+}
+
 .navigation {
   position: relative;
   display: flex;
@@ -93,11 +129,6 @@ ul {
   display: flex;
   align-items: center;
   min-height: 86px;
-}
-
-.navigation__list__item:hover, .navigation__list__item:active, .navigation__list__item:focus {
-  border-bottom: 1.5px solid #222222;
-  color: #222222;
 }
 
 .navigation__icon {
@@ -182,12 +213,10 @@ ul {
 .basic__title {
   margin: auto;
   margin-bottom: 48px;
-  width: 980px;
+  width: 1000px;
   text-align: center;
   font-size: 64px;
   line-height: 72px;
-  color: #ffffff;
-  text-shadow: -0 -2px 0 #222222,0 -2px 0 #222222, -0 2px 0 #222222, 0 2px 0 #222222,-2px -0 0 #222222,2px -0 0 #222222,-2px 0 0 #222222,2px 0 0 #222222,-1px -2px 0 #222222,1px -2px 0 #222222,-1px 2px 0 #222222,1px 2px 0 #222222,-2px -1px 0 #222222,2px -1px 0 #222222,-2px 1px 0 #222222,2px 1px 0 #222222;
 }
 
 .basic__black {
@@ -201,6 +230,7 @@ ul {
 }
 
 .basic__works {
+  position: relative;
   width: 100%;
   height: 345px;
   background: url(/image/BG-start.png);
@@ -217,7 +247,7 @@ ul {
 
 .basic__works__item {
   width: 25%;
-  height: 85px;
+  min-height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,14 +259,64 @@ ul {
 }
 
 .basic__works__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
   margin: auto;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  cursor: pointer;
+}
+
+.repair-services {
+  background: url(/image/BG-repair-services.png);
+}
+
+.repair-services__color {
+  background-color: #EB5757;
+}
+
+.hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: cover;
+}
+
+.hover__text {
+  background-color: transparent;
+  font-size: 64px;
+  line-height: 72px;
+  color: inherit;
+  text-shadow: -0 -2px 0 #ffffff,0 -2px 0 #ffffff, -0 2px 0 #ffffff, 0 2px 0 #ffffff,-2px -0 0 #ffffff,2px -0 0 #ffffff,-2px 0 0 #ffffff,2px 0 0 #ffffff,-1px -2px 0 #ffffff,1px -2px 0 #ffffff,-1px 2px 0 #ffffff,1px 2px 0 #ffffff,-2px -1px 0 #ffffff,2px -1px 0 #ffffff,-2px 1px 0 #ffffff,2px 1px 0 #ffffff;
+}
+
+.hover__color {
+  position: relative;
+  width: 25%;
+  height: calc( 100% - 85px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 45px 45px;
+}
+
+.hover__title {
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.hover__info {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 33px;
+  text-align: center;
+}
+
+.hover__icon {
+  transform: rotate(-90deg);
 }
 /*# sourceMappingURL=style.css.map */
