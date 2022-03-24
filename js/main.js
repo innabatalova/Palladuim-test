@@ -162,9 +162,12 @@ const main = () => {
   //скрытие элементов
   $(document).mouseout(function (e) {
     if (!basic.is(e.target) && basic.has(e.target).length === 0) {
+      navigationListItem.addClass("primary-theme").removeClass("dark-theme"); //смена темы шапки
       navigationIcon.removeClass("dark-theme");
       repairService.hide();
       typesOfJobs.hide();
+      interiorDesign.hide();
+      renovationOfPremises.hide();
       basicWorks.css({
         background: "url(/image/BG-start.png)",
       });
