@@ -67,6 +67,11 @@ ul {
   border: 1px solid #222222;
 }
 
+.black-font {
+  color: #222222;
+  text-shadow: none;
+}
+
 .flex {
   display: flex !important;
 }
@@ -217,11 +222,6 @@ ul {
   text-align: center;
   font-size: 64px;
   line-height: 72px;
-}
-
-.basic__black {
-  color: #222222;
-  text-shadow: none;
 }
 
 .basic__button {

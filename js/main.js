@@ -1,162 +1,80 @@
 const main = () => {
-  //ключевые элементы
+  //переменные
   const repairServiceItem = $(".repair-services__item");
   const repairService = $(".repair-services");
-
   const typesOfJobsItem = $(".types-of-jobs__item");
   const typesOfJobs = $(".types-of-jobs");
-
   const interiorDesignItem = $(".interior-design__item");
   const interiorDesign = $(".interior-design");
-
   const renovationOfPremisesItem = $(".renovation-of-premises__item");
   const renovationOfPremises = $(".renovation-of-premises");
-
+  const hovers = document.querySelectorAll(".hover");
+  const basicWorksItem = document.querySelectorAll(".basic__works__item");
   const basicWorks = $(".basic__works");
   const basic = $(".basic");
-
   const navigationListItem = $(".navigation__list__item");
   const navigationIcon = $(".navigation__icon");
 
-  repairServiceItem.on("mouseover", function () {
+  //функции
+  const toogleTheme = () => {
     navigationListItem.addClass("dark-theme").removeClass("primary-theme"); //смена темы шапки
     navigationIcon.addClass("dark-theme");
+    basicWorks.css({
+      background: "none",
+    });
+  };
 
-    //скрытие других блоков
-    setTimeout(function () {
-      typesOfJobs.hide();
-      interiorDesign.hide();
-      renovationOfPremises.hide();
-      repairService.show();
-    }, 500);
+  const closeBlocks = () => {
+    hovers.forEach((item) => {
+      item.style.display = "none";
+    });
+  };
 
-    setTimeout(function () {
-      //возврат видимости имен блоков
-      typesOfJobsItem.css({
-        opacity: "1",
-      });
-      interiorDesignItem.css({
-        opacity: "1",
-      });
-      renovationOfPremisesItem.css({
-        opacity: "1",
-      });
+  const openNameBlocks = () => {
+    basicWorksItem.forEach((item) => {
+      item.style.opacity = "1";
+    });
+  };
 
-      basicWorks.css({
-        background: "none",
-      });
-
-      //скрытие имени текущего блока
-      repairServiceItem.css({
-        opacity: "0",
-      });
-    }, 550);
+  //события
+  repairServiceItem.on("mouseover", function () {
+    toogleTheme();
+    closeBlocks();
+    repairService.show();
+    openNameBlocks();
+    repairServiceItem.css({
+      opacity: "0",
+    });
   });
 
   typesOfJobsItem.on("mouseover", function () {
-    navigationListItem.addClass("dark-theme").removeClass("primary-theme"); //смена темы шапки
-    navigationIcon.addClass("dark-theme");
-
-    //скрытие других блоков
-    setTimeout(function () {
-      interiorDesign.hide();
-      renovationOfPremises.hide();
-      repairService.hide();
-      typesOfJobs.show();
-    }, 500);
-
-    setTimeout(function () {
-      //возврат видимости имен блоков
-      repairServiceItem.css({
-        opacity: "1",
-      });
-      interiorDesignItem.css({
-        opacity: "1",
-      });
-      renovationOfPremisesItem.css({
-        opacity: "1",
-      });
-
-      basicWorks.css({
-        background: "none",
-      });
-
-      //скрытие имени текущего блока
-      typesOfJobsItem.css({
-        opacity: "0",
-      });
-    }, 550);
+    toogleTheme();
+    closeBlocks();
+    typesOfJobs.show();
+    openNameBlocks();
+    typesOfJobsItem.css({
+      opacity: "0",
+    });
   });
 
   interiorDesignItem.on("mouseover", function () {
-    navigationListItem.addClass("dark-theme").removeClass("primary-theme"); //смена темы шапки
-    navigationIcon.addClass("dark-theme");
-
-    //скрытие других блоков
-    setTimeout(function () {
-      typesOfJobs.hide();
-      renovationOfPremises.hide();
-      repairService.hide();
-      interiorDesign.show();
-    }, 500);
-
-    setTimeout(function () {
-      //возврат видимости имен блоков
-      repairServiceItem.css({
-        opacity: "1",
-      });
-      typesOfJobsItem.css({
-        opacity: "1",
-      });
-      renovationOfPremisesItem.css({
-        opacity: "1",
-      });
-
-      basicWorks.css({
-        background: "none",
-      });
-
-      //скрытие имени текущего блока
-      interiorDesignItem.css({
-        opacity: "0",
-      });
-    }, 550);
+    toogleTheme();
+    closeBlocks();
+    interiorDesign.show();
+    openNameBlocks();
+    interiorDesignItem.css({
+      opacity: "0",
+    });
   });
 
   renovationOfPremisesItem.on("mouseover", function () {
-    navigationListItem.addClass("dark-theme").removeClass("primary-theme"); //смена темы шапки
-    navigationIcon.addClass("dark-theme");
-
-    //скрытие других блоков
-    setTimeout(function () {
-      typesOfJobs.hide();
-
-      repairService.hide();
-      interiorDesign.hide();
-      renovationOfPremises.show();
-    }, 500);
-
-    setTimeout(function () {
-      //возврат видимости имен блоков
-      repairServiceItem.css({
-        opacity: "1",
-      });
-      typesOfJobsItem.css({
-        opacity: "1",
-      });
-      interiorDesignItem.css({
-        opacity: "1",
-      });
-
-      basicWorks.css({
-        background: "none",
-      });
-
-      //скрытие имени текущего блока
-      renovationOfPremisesItem.css({
-        opacity: "0",
-      });
-    }, 550);
+    toogleTheme();
+    closeBlocks();
+    renovationOfPremises.show();
+    openNameBlocks();
+    renovationOfPremisesItem.css({
+      opacity: "0",
+    });
   });
 
   //скрытие элементов
@@ -164,19 +82,13 @@ const main = () => {
     if (!basic.is(e.target) && basic.has(e.target).length === 0) {
       navigationListItem.addClass("primary-theme").removeClass("dark-theme"); //смена темы шапки
       navigationIcon.removeClass("dark-theme");
-      repairService.hide();
-      typesOfJobs.hide();
-      interiorDesign.hide();
-      renovationOfPremises.hide();
       basicWorks.css({
         background: "url(/image/BG-start.png)",
       });
-      repairServiceItem.css({
-        opacity: "1",
-      });
-      typesOfJobsItem.css({
-        opacity: "1",
-      });
+
+      closeBlocks();
+
+      openNameBlocks();
     }
   });
 };
