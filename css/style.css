@@ -27,10 +27,17 @@
 }
 
 body {
+  background-color: #ffffff;
   font-family: 'Gilroy 800';
   font-style: normal;
   font-weight: 800;
   min-width: 320px;
+  color: #222222;
+}
+
+input {
+  border: none;
+  outline: none;
 }
 
 a {
@@ -545,10 +552,6 @@ ul {
   color: #ffffff;
 }
 
-.examples__card__info:hover, .examples__card__info:active, .examples__card__info:focus {
-  opacity: 1;
-}
-
 .examples__card__wrap {
   display: flex;
   flex-direction: column;
@@ -589,5 +592,96 @@ ul {
     display: flex;
     flex-direction: column;
   }
+}
+
+.footer__title {
+  position: relative;
+  font-size: 32px;
+  line-height: 40px;
+  margin-top: 135px;
+  margin-bottom: 50px;
+}
+
+.footer__title::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: -80px;
+  width: 40px;
+  height: 1px;
+  background-color: #222222;
+}
+
+.footer__contacts__name {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer__contacts__data {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.footer__social {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer__social__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #222222;
+}
+
+.footer__form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__form__title {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer__form__name {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+.footer__form__input {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #909090;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.footer__form__end {
+  background: url(/image/footer-icon.svg) no-repeat 90% 1px;
+  background-size: auto 90%;
+}
+
+.footer__form__info {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 12px;
+  color: #909090;
+}
+
+.footer__form__info a {
+  color: #222222;
+  border-bottom: 1px dashed #222222;
 }
 /*# sourceMappingURL=style.css.map */
