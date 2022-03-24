@@ -207,6 +207,40 @@ ul {
   line-height: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .navigation {
+    justify-content: space-around;
+  }
+  .navigation__icon__map, .navigation__icon__call {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navigation {
+    min-height: 50px;
+    height: 50px;
+    max-width: 95%;
+  }
+  .navigation__icon__logo svg {
+    width: 20px;
+    height: 20px;
+  }
+  .navigation__list {
+    max-width: 95%;
+    min-width: 150px;
+    justify-content: space-around;
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .navigation__icon__logo {
+    display: none;
+  }
+}
+
 .basic {
   display: flex;
   flex-direction: column;
