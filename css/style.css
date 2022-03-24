@@ -296,6 +296,45 @@ ul {
   margin: auto;
 }
 
+@media screen and (max-width: 992px) {
+  .basic__title {
+    font-size: 50px;
+    line-height: 60px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .basic__works__item {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .basic {
+    padding-top: 35px;
+  }
+  .basic__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .basic__button {
+    margin-bottom: 45px;
+  }
+  .basic__works {
+    height: 545px;
+  }
+  .basic__works__list {
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .basic__works__item {
+    width: 95%;
+  }
+}
+
 .repair-services {
   display: none;
   background: url(/image/BG-repair-services.png);
