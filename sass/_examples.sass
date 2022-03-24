@@ -121,3 +121,27 @@
       line-height: 12px
       opacity: 0.7
       margin-bottom: 10px
+
+  &__button
+    width: 185px
+    margin-top: 65px
+    margin-bottom: 135px
+
+@media screen and ( max-width: 1200px )
+  .examples
+
+    &__title
+      text-align: center
+
+      &::before
+        display: none
+
+@media screen and ( max-width: 576px )
+  .examples
+
+    &__title
+      margin-top: 40px
+
+    &__wrapper
+      display: flex
+      flex-direction: column
