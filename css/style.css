@@ -545,6 +545,10 @@ ul {
   color: #ffffff;
 }
 
+.examples__card__info:hover, .examples__card__info:active, .examples__card__info:focus {
+  opacity: 1;
+}
+
 .examples__card__wrap {
   display: flex;
   flex-direction: column;

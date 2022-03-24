@@ -9,8 +9,10 @@ const examples = () => {
     }
   });
 
-  examplesCard.on("mouseout", function () {
-    examplesCardInfo.css("opacity", "0");
+  $(document).on("mouseout", function (e) {
+    if (!examplesCard.is(e.target) && examplesCard.has(e.target).length === 0) {
+      examplesCardInfo.css("opacity", "0");
+    }
   });
 };
 
