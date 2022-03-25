@@ -280,7 +280,6 @@ ul {
   height: 345px;
   background: url(../image/BG-start.png);
   background-size: cover;
-  display: flex;
 }
 
 .basic__works__list {
