@@ -1,12 +1,12 @@
 const main = () => {
   //переменные
-  const repairServiceItem = $(".repair-services__item");
+  const repairServiceItem = $(".repair-services-item");
   const repairService = $(".repair-services");
-  const typesOfJobsItem = $(".types-of-jobs__item");
+  const typesOfJobsItem = $(".types-of-jobs-item");
   const typesOfJobs = $(".types-of-jobs");
-  const interiorDesignItem = $(".interior-design__item");
+  const interiorDesignItem = $(".interior-design-item");
   const interiorDesign = $(".interior-design");
-  const renovationOfPremisesItem = $(".renovation-of-premises__item");
+  const renovationOfPremisesItem = $(".renovation-of-premises-item");
   const renovationOfPremises = $(".renovation-of-premises");
   const hovers = document.querySelectorAll(".hover");
   const basicWorksItem = document.querySelectorAll(".basic__works__item");
