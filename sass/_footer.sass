@@ -4,7 +4,6 @@
     position: relative
     font-size: 32px
     line-height: 40px
-    margin-top: 135px
     margin-bottom: 50px
 
     &::before
@@ -17,10 +16,19 @@
       background-color: #222222
 
   &__contacts
+    display: flex
+    flex-wrap: wrap
+
+    &__info
+      display: flex
+      flex-direction: column
+      width: 50%
+      margin-bottom: 48px
 
     &__name
       font-size: 14px
       line-height: 20px
+      margin-bottom: 8px
 
     &__data
       font-family: 'Montserrat'
@@ -28,10 +36,17 @@
       font-weight: 400
       font-size: 13px
       line-height: 24px
+      cursor: pointer
 
   &__social
     font-size: 14px
     line-height: 20px
+
+    &__wrap
+      display: flex
+      width: 120px
+      justify-content: space-between
+      margin-top: 15px
 
     &__icon
       width: 30px
@@ -42,11 +57,13 @@
   &__form
     width: 360px
     display: flex
+    padding: 0
     flex-direction: column
 
     &__title
       font-size: 14px
       line-height: 20px
+      margin-bottom: 15px
 
     &__name
       font-family: 'Montserrat'
@@ -63,12 +80,15 @@
       line-height: 24px
       color: #909090
       border-bottom: 1px solid #EBEBEB
+      margin-bottom: 20px
 
     &__end
-      background: url(/image/footer-icon.svg) no-repeat 90% 1px
+      background: url(/image/footer-icon.svg) no-repeat 99% 1px
       background-size: auto 90%
+      margin-bottom: 28px
 
     &__info
+      margin-bottom: 35px
       font-family: 'Montserrat'
       font-style: normal
       font-weight: 500
@@ -79,3 +99,28 @@
     &__info a
       color: #222222
       border-bottom: 1px dashed #222222
+
+    &__button
+      width: 270px
+
+  &-copyright
+    display: flex
+    justify-content: space-between
+    padding-top: 25px
+    padding-bottom: 25px
+    margin-top: 135px
+    border-top: 1.5px solid #222222
+
+    &__info
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 400
+      font-size: 13px
+      line-height: 24px
+
+      &__strong
+        font-family: 'Gilroy'
+        font-style: normal
+        font-weight: 800
+        font-size: 14px
+        line-height: 20px
