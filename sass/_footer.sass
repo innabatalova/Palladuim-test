@@ -124,3 +124,35 @@
         font-weight: 800
         font-size: 14px
         line-height: 20px
+
+@media screen and ( max-width: 1200px )
+  .footer
+
+    &__contacts
+      margin-bottom: 30px
+
+    &__form
+      padding-left: 12px
+      width: 70%
+
+    &-copyright
+      margin-top: 70px
+
+@media screen and ( max-width: 992px )
+  .footer
+
+    &-copyright
+      flex-direction: column
+
+@media screen and ( max-width: 576px )
+  .footer
+
+    &__contacts
+
+      &__info
+        width: 100%
+
+    &__form
+      width: 95%
+      padding-left: 0
+      margin: auto
