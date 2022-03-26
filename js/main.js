@@ -83,7 +83,7 @@ const main = () => {
       navigationListItem.addClass("primary-theme").removeClass("dark-theme"); //смена темы шапки
       navigationIcon.removeClass("dark-theme");
       basicWorks.css({
-        background: "url(../image/BG-start.png)",
+        background: "url(./image/BG-start.png)",
       });
 
       closeBlocks();
